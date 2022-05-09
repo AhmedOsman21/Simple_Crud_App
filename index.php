@@ -14,8 +14,8 @@
 
     <div class="container main-container">
         <h1>Crud Application</h1>
-        
-        
+
+
         <table class="table table-secondary table-striped">
             <tr class="table-dark">
                 <th style="width: 10%">ID</th>
@@ -24,8 +24,8 @@
                 <th>Email</th>
                 <th style="width: 20%">Options</th>
             </tr>
-            
-            
+
+
             <tr>
                 <td>1</td>
                 <td>adamkr213</td>
@@ -33,7 +33,7 @@
                 <td>adamdarwen213@gmail.com</td>
                 <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
-            
+
             <tr>
                 <td>2</td>
                 <td>johntayson1</td>
@@ -48,7 +48,7 @@
                 <td>carlsawen@gmail.com</td>
                 <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
-            
+
             <tr>
                 <td>4</td>
                 <td>ladderclimber23</td>
@@ -67,7 +67,7 @@
             </tr>
 
             <tr>
-                
+
                 <td>6</td>
                 <td>johnsmith123</td>
                 <td>John Smith</td>
@@ -84,7 +84,7 @@
             </tr>
         </table>
 
-        <button class="btn btn-success new-rec">  <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button>
+        <button class="btn btn-success new-rec"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
