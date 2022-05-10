@@ -84,7 +84,7 @@
             </tr>
         </table>
 
-        <button class="btn btn-success new-rec"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button>
+        <a href="new_records"><button class="btn btn-success new-rec"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button></a>
     </div>
 
     <script src="js/bootstrap.min.js"></script>
