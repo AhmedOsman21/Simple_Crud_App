@@ -31,7 +31,7 @@
                 <td>adamkr213</td>
                 <td>Adam Darwen</td>
                 <td>adamdarwen213@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
 
             <tr>
@@ -39,14 +39,14 @@
                 <td>johntayson1</td>
                 <td>Jason Tayson</td>
                 <td>johnreko42@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>carlosawen</td>
                 <td>Carl Sandeel</td>
                 <td>carlsawen@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
 
             <tr>
@@ -54,7 +54,7 @@
                 <td>ladderclimber23</td>
                 <td>Jacklen Daher</td>
                 <td>jacklendaher@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
 
             <tr>
@@ -63,7 +63,7 @@
                 <td>savytech103</td>
                 <td>Tareq Fathy</td>
                 <td>tf2olhamed@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
 
             <tr>
@@ -72,7 +72,7 @@
                 <td>johnsmith123</td>
                 <td>John Smith</td>
                 <td>joesmthl22@outlook.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
 
             <tr>
@@ -80,14 +80,15 @@
                 <td>sandrawh1t3</td>
                 <td>Sandra White</td>
                 <td>sansansun@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-primary">Update</button> <button class="btn btn-danger">Delete</button></td>
+                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
             </tr>
         </table>
 
         <a href="new_record"><button class="btn btn-success new-rec"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button></a>
     </div>
 
-    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
 </body>
-
 </html>
