@@ -13,82 +13,103 @@
 <body>
 
     <div class="container main-container">
-        <h1>Crud Application</h1>
+        <div class="heading">
+            <h1>Crud Application</h1>
+        </div>
+
+        <div class="new-rec-container">
+            <button class="btn btn-success new-rec-btn" data-toggle="modal" data-targe="#new_rec_modal"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button>
+        </div>
 
 
-        <table class="table table-secondary table-striped">
-            <tr class="table-dark">
-                <th style="width: 10%">ID</th>
-                <th>Username</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th style="width: 20%">Options</th>
-            </tr>
+        <!-- Modal -->
+        <div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Add New Record</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-table">
+
+            <table class="table table-secondary table-striped">
+                <tr class="table-dark">
+                    <th style="width: 10%">ID</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th style="width: 20%">Options</th>
+                </tr>
 
 
-            <tr>
-                <td>1</td>
-                <td>adamkr213</td>
-                <td>Adam Darwen</td>
-                <td>adamdarwen213@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>adamkr213</td>
+                    <td>Adam Darwen</td>
+                    <td>adamdarwen213@gmail.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
 
-            <tr>
-                <td>2</td>
-                <td>johntayson1</td>
-                <td>Jason Tayson</td>
-                <td>johnreko42@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>carlosawen</td>
-                <td>Carl Sandeel</td>
-                <td>carlsawen@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
+                <tr>
+                    <td>2</td>
+                    <td>johntayson1</td>
+                    <td>Jason Tayson</td>
+                    <td>johnreko42@gmail.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>carlosawen</td>
+                    <td>Carl Sandeel</td>
+                    <td>carlsawen@gmail.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
 
-            <tr>
-                <td>4</td>
-                <td>ladderclimber23</td>
-                <td>Jacklen Daher</td>
-                <td>jacklendaher@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
+                <tr>
+                    <td>4</td>
+                    <td>ladderclimber23</td>
+                    <td>Jacklen Daher</td>
+                    <td>jacklendaher@gmail.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>5</td>
-                <td>savytech103</td>
-                <td>Tareq Fathy</td>
-                <td>tf2olhamed@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
+                    <td>5</td>
+                    <td>savytech103</td>
+                    <td>Tareq Fathy</td>
+                    <td>tf2olhamed@gmail.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
 
-            <tr>
+                <tr>
 
-                <td>6</td>
-                <td>johnsmith123</td>
-                <td>John Smith</td>
-                <td>joesmthl22@outlook.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
+                    <td>6</td>
+                    <td>johnsmith123</td>
+                    <td>John Smith</td>
+                    <td>joesmthl22@outlook.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
 
-            <tr>
-                <td>7</td>
-                <td>sandrawh1t3</td>
-                <td>Sandra White</td>
-                <td>sansansun@gmail.com</td>
-                <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
-            </tr>
-        </table>
+                <tr>
+                    <td>7</td>
+                    <td>sandrawh1t3</td>
+                    <td>Sandra White</td>
+                    <td>sansansun@gmail.com</td>
+                    <td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>
+                </tr>
+            </table>
 
-        <a href="new_record"><button class="btn btn-success new-rec"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button></a>
+        </div>
     </div>
 
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
-    
+
 </body>
+
 </html>
