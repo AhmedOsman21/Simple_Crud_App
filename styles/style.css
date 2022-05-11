@@ -90,6 +90,7 @@ table td, table th {
 .form-control {
     padding: 2rem;
     padding-bottom: 0;
+    box-shadow: 1px 5px 10px rgba(5, 5, 5, 0.7);
 }
 
 form {
