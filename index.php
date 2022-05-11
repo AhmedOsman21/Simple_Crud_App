@@ -18,7 +18,7 @@
         </div>
 
         <div class="new-rec-container">
-            <button class="btn btn-success new-rec-btn" data-toggle="modal" data-target="#new_rec_modal"> <img src="icons/new-rec.png" width="15" alt="" style="margin-right: 2px; margin-bottom: 3px">New Record</button>
+            <button class="btn btn-success new-rec-btn"> <img src="icons/new-rec.png" width="15" alt="" class="new-rec-btn-icon">New Record</button>
         </div>
 
 

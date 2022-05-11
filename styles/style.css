@@ -1,6 +1,7 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    background-color:rgb(202, 236, 236);
 }
 
 .main-container {
@@ -15,8 +16,14 @@ h1 {
     margin-bottom: 2rem;
 }
 
+.table {
+    margin: 0;
+    border-spacing: 0;
+}
+
 .data-table {
     width: 100%;
+    box-shadow: 1px 5px 10px rgba(5, 5, 5, 0.7);
 }
 
 table td, table th {
@@ -35,8 +42,25 @@ table td, table th {
     width: 100%;
     justify-content: flex-end;
     margin-bottom: 2rem;
-    
 }
+
+.btn {
+    text-transform: none;
+}
+
+
+.new-rec-btn {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: none;
+}
+
+.new-rec-btn-icon {
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+
 
 .opt-field {
     display: flex;
