@@ -18,7 +18,7 @@
         </div>
 
         <div class="new-rec-container">
-            <button class="btn btn-success new-rec-btn"> <img src="icons/new-rec.png" width="15" alt="" class="new-rec-btn-icon">New Record</button>
+            <a href="add_record"><button class="btn btn-success new-rec-btn"> <img src="icons/new-rec.png" width="15" alt="" class="new-rec-btn-icon">New Record</button></a>
         </div>
 
 
