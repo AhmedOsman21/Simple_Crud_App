@@ -66,3 +66,61 @@ table td, table th {
     display: flex;
     justify-content: space-evenly;
 }
+
+
+
+
+/* Form Styling for adding records*/
+@media (min-width:980px) {
+    .form-control {
+        padding: 2rem;
+        padding-bottom: 0;
+        width: 70%;
+    }    
+}
+
+@media (min-width:1200px) {
+    .form-control {
+        padding: 2rem;
+        padding-bottom: 0;
+        width: 50%;
+    }    
+}
+
+.form-control {
+    padding: 2rem;
+    padding-bottom: 0;
+}
+
+form {
+    margin: 2rem auto;
+}
+
+
+
+
+.text-inp {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #86bfc0;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-left: 0.5rem;
+}
+
+
+
+.text-inp:focus {
+    border-bottom: 1px solid #329193;
+}
+
+
+.submit-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.submit-btn {
+    width: 7rem;
+}
