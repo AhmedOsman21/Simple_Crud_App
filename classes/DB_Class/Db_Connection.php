@@ -1,4 +1,6 @@
 <?php
+namespace DB_Class;
+use PDO;
 include("db_config.php");
 
 class Db_Connection {
