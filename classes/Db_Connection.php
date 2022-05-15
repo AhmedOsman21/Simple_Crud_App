@@ -3,7 +3,6 @@ include("db_config.php");
 
 class Db_Connection {
     public $conn;
-    private $result;
 
     public function __construct(
         string $db_host = DB_HOST,
