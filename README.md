@@ -3,31 +3,31 @@
 ### Project Structure
 - Classes
     - DB_classes
-        Db_Connection
+        *Db_Connection*
         
 
 - icons
-    new-rec.png
+    *new-rec.png*
 
 - js 
-    bootstrap.min.js
-    jquery.min.js
-    script.js
+    *bootstrap.min.js*
+    *jquery.min.js*
+    *script.js*
 
 - styles
-    bootstrap.min.css
-    style.css
+    *bootstrap.min.css*
+    *style.css*
 
-.hataccess
+*.hataccess*
 
-add_records.php
+*add_records.php*
 
-autoload.php
+*autoload.php*
 
-db_config.php
+*db_config.php*
 
-db.sql
+*db.sql*
 
-index.php
+*index.php*
 
-README.md
+*README.md*
