@@ -3,7 +3,8 @@
 ### Project Structure
 - Classes
     - DB_classes
-        - Db_Connection
+        Db_Connection
+        
 
 - icons
     new-rec.png
@@ -17,4 +18,16 @@
     bootstrap.min.css
     style.css
 
+.hataccess
 
+add_records.php
+
+autoload.php
+
+db_config.php
+
+db.sql
+
+index.php
+
+README.md
