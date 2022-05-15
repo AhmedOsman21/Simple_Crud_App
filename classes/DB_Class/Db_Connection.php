@@ -1,10 +1,12 @@
 <?php
 namespace DB_Class;
 use PDO;
+
+// Db Constants File
 include("db_config.php");
 
 class Db_Connection {
-    public $conn;
+    public static $conn;
 
     public function __construct(
         string $db_host = DB_HOST,
@@ -13,6 +15,6 @@ class Db_Connection {
         string $db_pass = DB_PASS,
         array $db_opt   = DB_OPTIONS
     ) {
-        $this->conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass, $db_opt);
+        self::$conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass, $db_opt);
     }
 }
