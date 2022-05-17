@@ -1,20 +1,29 @@
 <?php
+
 namespace DB_Class;
+
 use PDO;
+use PDOException;
 
 // Db Constants File
 include("db_config.php");
 
-class Db_Connection {
-    public static $conn;
+class DB_Connection {
+    protected $conn;
 
     public function __construct(
-        string $db_host = DB_HOST,
-        string $db_name = DB_NAME,
-        string $db_user = DB_USERNAME,
-        string $db_pass = DB_PASS,
-        array $db_opt   = DB_OPTIONS
+        $db_host = DB_HOST,
+        $db_name = DB_NAME,
+        $db_user = DB_USERNAME,
+        $db_pass = DB_PASS,
+        $db_opt  = DB_OPTIONS
     ) {
-        self::$conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass, $db_opt);
+        try {
+            $this->conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass, $db_opt);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo "Connected Successfully";
+        } catch (PDOException $e) {
+            echo "Database connection failed: " . $e->getMessage();
+        }
     }
 }
