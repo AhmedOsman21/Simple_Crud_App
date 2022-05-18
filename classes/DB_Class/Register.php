@@ -13,37 +13,37 @@ class Records extends DB_Connection {
 
 
     // Setters
-    public function setId($id) {
+    public function setId(int $id) {
         $this->id = $id;
     }
 
-    public function setUser($username) {
+    public function setUser(string $username) {
         $this->username = $username;
     }
 
-    public function setName($name) {
+    public function setName(string $name) {
         $this->name = $name;
     }
 
-    public function setEmail($email) {
+    public function setEmail(string $email) {
         $this->email = $email;
     }
 
 
     // Getters
-    public function getId() {
+    public function getId(): int {
         return $this->id;
     }
 
-    public function getUser() {
+    public function getUser(): string {
         return $this->username;
     }
 
-    public function getName() {
+    public function getName(): string {
         return $this->name;
     }
 
-    public function getEmail() {
+    public function getEmail(): string {
         return $this->email;
     }
 
