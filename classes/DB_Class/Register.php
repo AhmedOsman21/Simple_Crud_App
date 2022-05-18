@@ -13,8 +13,10 @@ class Records extends DB_Connection {
     // Read
     public function readAll() {
         $sql = "SELECT * FROM users";
-        $stmt = $this->conn->query($sql);
-        $data = $stmt->fetchAll();
-        return $data;
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $users = $stmt->fetchAll();
+        return $users;
     }
 }
+
