@@ -13,6 +13,14 @@ class Records extends DB_Connection {
 
 
     // Setters
+    public function setRecord(int $id, string $username, string $name, string $email) {
+        $this->id       = $id;
+        $this->username = $username;
+        $this->name     = $name;
+        $this->email    = $email;
+    }
+
+
     public function setId(int $id) {
         $this->id = $id;
     }
