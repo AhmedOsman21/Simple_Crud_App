@@ -12,7 +12,7 @@ class Records extends DB_Connection {
     private $email;
 
 
-    // Class Setters
+    // Setters
     public function setId($id) {
         $this->id = $id;
     }
@@ -29,8 +29,26 @@ class Records extends DB_Connection {
         $this->email = $email;
     }
 
-    
-    // Read
+
+    // Getters
+    public function getId() {
+        return $this->id;
+    }
+
+    public function getUser() {
+        return $this->username;
+    }
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function getEmail() {
+        return $this->email;
+    }
+
+
+    // Read All Users
     public function readAll() {
         $sql = "SELECT * FROM users";
         $stmt = $this->conn->prepare($sql);
