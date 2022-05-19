@@ -106,5 +106,16 @@ class Records extends DB_Connection {
             return $e->getMessage();
         }
     }
+
+    // Update User Data
+    public function update() {
+        try {
+            $sql = "UPDATE users SET username=?, first_name=?, last_name=?, email=? WHERE id=?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email, $this->id]);
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }
 
