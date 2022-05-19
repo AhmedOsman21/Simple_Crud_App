@@ -96,11 +96,15 @@ class Records extends DB_Connection {
 
     // Read All Users
     public function readAll() {
-        $sql = "SELECT * FROM users";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute();
-        $users = $stmt->fetchAll();
-        return $users;
+        try {
+            $sql = "SELECT * FROM users";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            $users = $stmt->fetchAll();
+            return $users;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
     }
 }
 
