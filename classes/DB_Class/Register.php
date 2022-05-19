@@ -73,7 +73,7 @@ class Records extends DB_Connection {
             $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
-            $result = '<script src="js/record_insertion.js"><script>';
+            $result = '<script src="js/record_insertion.js"></script>';
             echo $result;
         } catch(PDOException $e) {
             return $e->getMessage();
@@ -113,6 +113,20 @@ class Records extends DB_Connection {
             $sql = "UPDATE users SET username=?, first_name=?, last_name=?, email=? WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email, $this->id]);
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
+
+    // Delete User
+    public function delete() {
+        try {
+            $sql = "DELETE FROM users WHERE id=?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$this->id]);
+            $result = '<script src="js/record_deletion.js"></script>';
+            echo $result;
         } catch (PDOException $e) {
             return $e->getMessage();
         }
