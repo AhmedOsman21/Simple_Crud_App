@@ -81,6 +81,19 @@ class Records extends DB_Connection {
     }
 
 
+    // Read Single User
+    public function read() {
+        try {
+            $sql = "SELECT * FROM users WHERE id=?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$this->id]);
+            $user = $stmt->fetchAll();
+            return $user;
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
     // Read All Users
     public function readAll() {
         $sql = "SELECT * FROM users";
