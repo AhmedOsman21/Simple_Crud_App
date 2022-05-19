@@ -8,15 +8,17 @@ include "Db_Connection.php";
 class Records extends DB_Connection {
     private $id;
     private $username;
-    private $name;
+    private $firstName;
+    private $lastName;
     private $email;
 
 
     // Setters
-    public function setRecord(int $id, string $username, string $name, string $email) {
+    public function setRecord(int $id, string $username, string $firstName, string $lastName, string $email) {
         $this->id       = $id;
         $this->username = $username;
-        $this->name     = $name;
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
         $this->email    = $email;
     }
 
@@ -29,8 +31,12 @@ class Records extends DB_Connection {
         $this->username = $username;
     }
 
-    public function setName(string $name) {
-        $this->name = $name;
+    public function setFirstName(string $firstName) {
+        $this->firstName = $firstName;
+    }
+
+    public function setLastName(string $lastName) {
+        $this->lastName = $lastName;
     }
 
     public function setEmail(string $email) {
@@ -47,8 +53,12 @@ class Records extends DB_Connection {
         return $this->username;
     }
 
-    public function getName(): string {
-        return $this->name;
+    public function getFirstName(): string {
+        return $this->firstName;
+    }
+
+    public function getLastName(): string {
+        return $this->lastName;
     }
 
     public function getEmail(): string {
