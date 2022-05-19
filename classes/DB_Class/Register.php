@@ -7,7 +7,7 @@ use PDOException;
 include "Db_Connection.php";
 
 
-class Records extends DB_Connection {
+class Record extends DB_Connection {
     private $id;
     private $username;
     private $firstName;
