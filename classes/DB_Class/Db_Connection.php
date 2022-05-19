@@ -22,7 +22,7 @@ class DB_Connection {
             $this->conn = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass, $db_opt);
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
-            echo "Database connection failed: " . $e->getMessage();
+            return $e->getMessage();
         }
     }
 }
