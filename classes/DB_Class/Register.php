@@ -2,6 +2,8 @@
 
 namespace DB_Class;
 
+use PDOException;
+
 include "Db_Connection.php";
 
 
@@ -21,7 +23,6 @@ class Records extends DB_Connection {
         $this->lastName = $lastName;
         $this->email    = $email;
     }
-
 
     public function setId(int $id) {
         $this->id = $id;
@@ -63,6 +64,20 @@ class Records extends DB_Connection {
 
     public function getEmail(): string {
         return $this->email;
+    }
+
+
+    // Insert a record
+    public function insertRecord() {
+        try {
+            $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
+            $result = '<script src="js/record_insertion.js"><script>';
+            echo $result;
+        } catch(PDOException $e) {
+            return $e->getMessage();
+        }
     }
 
 
