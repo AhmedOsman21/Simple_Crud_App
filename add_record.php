@@ -22,7 +22,7 @@
 
         <div class="form-control">
             <h4>Add new record</h4>
-            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
+            <form action="register.php" method="post">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" name="username" id="username" class="text-inp">
                 <label for="fname" class="form-label">First Name</label>
@@ -32,7 +32,7 @@
                 <label for="email" class="form-label">Email Address</label>
                 <input type="text" name="email" id="email" class="text-inp">
                 <div class="submit-form">
-                    <input type="submit" value="Register" class="btn btn-success submit-btn">
+                    <input type="submit" value="Register" class="btn btn-success submit-btn" name="register">
                 </div>
             </form>
         </div>
