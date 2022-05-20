@@ -131,5 +131,22 @@ class Record extends DB_Connection {
             return $e->getMessage();
         }
     }
+
+
+    // Check Username
+    public function userExists() {
+        try {
+            $sql = "SELECT username FROM users WHERE username = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$this->username]);
+            if ($stmt->rowCount() > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }
 
