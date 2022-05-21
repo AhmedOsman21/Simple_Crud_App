@@ -9,6 +9,9 @@ $usernameErr = $fnameErr = $lnameErr = $emailErr = "";
 // Form Variables
 $username = $fname = $lname = $email = "";
 
+// Confirmation Message Variable
+$confirm_msg = "";
+
 // Username Regex Pattern
 $userPattern = "/^\w{5,50}$/";
 
@@ -105,5 +108,9 @@ if (isset($_POST['register'])) {
         $record->setFirstName($fname);
         $record->setLastName($lname);
         $record->setEmail($email);
+        $record->insertRecord();
+        if ($record->result) {
+            $confirm_msg = $record->result;
+        }
     }
 }
