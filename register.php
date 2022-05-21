@@ -13,7 +13,7 @@ $username = $fname = $lname = $email = "";
 $userPattern = "/^\w{5,50}$/";
 
 // String Regex Pattern
-$stringPattern = "/^[a-zA-Z ]*$";
+$stringPattern = "/^[a-zA-Z ]*$/";
 
 // Clean Inputs
 function cleanInput($data, $type="") {
