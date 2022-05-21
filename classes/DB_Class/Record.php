@@ -28,19 +28,19 @@ class Record extends DB_Connection {
         $this->id = $id;
     }
 
-    public function setUser(?string $username) {
+    public function setUser(string $username) {
         $this->username = $username;
     }
 
-    public function setFirstName(?string $firstName) {
+    public function setFirstName(string $firstName) {
         $this->firstName = $firstName;
     }
 
-    public function setLastName(?string $lastName) {
+    public function setLastName(string $lastName) {
         $this->lastName = $lastName;
     }
 
-    public function setEmail(?string $email) {
+    public function setEmail(string $email) {
         $this->email = $email;
     }
 
