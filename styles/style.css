@@ -105,11 +105,20 @@ form {
     outline: none;
     border-bottom: 1px solid #86bfc0;
     width: 100%;
-    margin-bottom: 1.5rem;
     padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
+.required {
+    color: #FF0001;
+}
 
+.error {
+    color: #FF0001;
+    display: block;
+    font-size: small;
+    margin-bottom: 1.5rem;
+}  
 
 .text-inp:focus {
     border-bottom: 1px solid #329193;
