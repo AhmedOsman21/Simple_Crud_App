@@ -1,2 +1,2 @@
 alert("Data has been saved successfully!");
-document.location = "../";
+document.location = "index.php";
