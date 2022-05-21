@@ -125,6 +125,11 @@ form {
     font-size: small;
 }
 
+.records-link {
+    text-decoration: underline;
+    color:darkblue;
+}
+
 .text-inp:focus {
     border-bottom: 1px solid #329193;
 }

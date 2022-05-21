@@ -74,7 +74,7 @@ class Record extends DB_Connection {
             $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
-            $this->result = "User Has Been Registered Successfully.";
+            $this->result = "User Has Been Registered Successfully. <a href='../crud_app/' class='records-link'>Records</a>";
         } catch(PDOException $e) {
             return $e->getMessage();
         }
@@ -125,7 +125,7 @@ class Record extends DB_Connection {
             $sql = "DELETE FROM users WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->id]);
-            $this->result = "User Has Been Deleted Successfully.";
+            $this->result = "User Has Been Deleted Successfully. <a href='../crud_app/' class='records-link'>Records</a>";
         } catch (PDOException $e) {
             return $e->getMessage();
         }
