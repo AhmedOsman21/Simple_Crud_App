@@ -85,5 +85,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     // Email Validation
     if (empty($_POST['email'])) {
         $emailErr = "Email address is required!";
+    } else {
+        // Check if email is not valid
+        if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Please, type a valid email!";
+        } else {
+            // Valide Email
+            $email = cleanInput($email);
+        }
     }
 }
