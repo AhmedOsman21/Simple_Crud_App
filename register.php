@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else {
         // Check if username is not valid
         if (!preg_match($userPattern, $_POST['username'])) {
-            $usernameErr = "Please only use letters (a-z), numbers and underscore _";
+            $usernameErr = "Please only use letters (a-z), numbers and underscore (_)";
         } else {
             // Set user to check it.
             $record->setUser($_POST['username']);
