@@ -95,3 +95,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 }
+
+// User Clicked Register Button
+if ($_POST['register']) {
+    // No Errors
+    if (!$usernameErr && !$fnameErr && !$lnameErr && !$emailErr) {
+        // Setting Data To Be Inserted In Database
+        $record->setUser($username); 
+        $record->setFirstName($fname);
+        $record->setLastName($lname);
+        $record->setEmail($email);
+    }
+}
+
