@@ -16,7 +16,7 @@ class Record extends DB_Connection {
 
 
     // Setters
-    public function setRecord(int $id, ?string $username, ?string $firstName, ?string $lastName, ?string $email) {
+    public function setRecord(int $id, string $username, string $firstName, string $lastName, string $email) {
         $this->id       = $id;
         $this->username = $username;
         $this->firstName = $firstName;
@@ -73,8 +73,8 @@ class Record extends DB_Connection {
             $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
-            $result = '<script src="js/record_insertion.js"></script>';
-            echo $result;
+
+            die();
         } catch(PDOException $e) {
             return $e->getMessage();
         }
@@ -125,8 +125,6 @@ class Record extends DB_Connection {
             $sql = "DELETE FROM users WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->id]);
-            $result = '<script src="js/record_deletion.js"></script>';
-            echo $result;
         } catch (PDOException $e) {
             return $e->getMessage();
         }
