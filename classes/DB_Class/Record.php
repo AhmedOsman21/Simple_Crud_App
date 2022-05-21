@@ -73,8 +73,6 @@ class Record extends DB_Connection {
             $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
-
-            die();
         } catch(PDOException $e) {
             return $e->getMessage();
         }
