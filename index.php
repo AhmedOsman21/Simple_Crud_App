@@ -44,6 +44,19 @@ $data = $record->readAll();
                     <th style="width: 20%">Options</th>
                 </tr>
 
+                <?php
+                foreach ($data as $key => $val) {
+                    ob_start();
+                    echo "<tr>";
+                    echo "<td>" . $val['id'] . "</td>";
+                    echo "<td>" . $val['username'] . "</td>";
+                    echo "<td>" . $val['first_name'] . " " . $val['last_name'] . "</td>";
+                    echo "<td>" . $val['email'] . "</td>";
+                    echo '<td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>';
+                    echo "</tr>";
+                }
+                ?>
+
             </table>
 
         </div>
