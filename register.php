@@ -12,6 +12,9 @@ $username = $fname = $lname = $email = "";
 // Username Regex Pattern
 $userPattern = "/^\w{5,50}$/";
 
+// String Regex Pattern
+$stringPattern = "/^[a-zA-Z ]*$";
+
 // Clean Inputs
 function cleanInput($data, $type="") {
     // Clean Input Data
@@ -53,14 +56,30 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         }
     }
 
-    // First Name Validation
+    // Check if first name is empty
     if (empty($_POST['fname'])) {
         $fnameErr = "First name is required!";
+    } else {
+        // Check if first name is not valid
+        if (!preg_match($stringPattern, $_POST['fname'])) {
+            $fnameErr = "Only alphabets and white spaces are allowed";
+        } else {
+            // Valide First Name
+            $fname = cleanInput($_POST['fname'], "name");
+        }
     }
 
-    // Last Name Validation
+    // Check if last name is empty
     if (empty($_POST['lname'])) {
         $lnameErr = "Last name is required!";
+    } else {
+        // Check if last name is not valid
+        if (!preg_match($stringPattern, $_POST['lname'])) {
+            $lnameErr = "Only alphabets and white spaces are allowed";
+        } else {
+            // Valide Last Name
+            $lname = cleanInput($_POST['lname'], "name");
+        }
     }
 
     // Email Validation
