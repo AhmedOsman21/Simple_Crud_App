@@ -13,7 +13,7 @@ $username = $fname = $lname = $email = "";
 $userPattern = "/^\w{5,50}$/";
 
 // Clean Inputs
-function clearInput($data) {
+function cleanInput($data) {
     $data = trim(stripslashes(htmlspecialchars($data)));
     return $data;
 }
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $usernameErr = "Username Already Exists!";
             } else {
                 // Valid Username
-                $username = $_POST['username'];
+                $username = cleanInput($_POST['username']);
             }
             // Reset username property after checking whether it's valid or not
             $record->setUser(null);
