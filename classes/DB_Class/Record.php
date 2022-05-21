@@ -18,11 +18,11 @@ class Record extends DB_Connection {
 
     // Setters
     public function setRecord(int $id, string $username, string $firstName, string $lastName, string $email) {
-        $this->id       = $id;
-        $this->username = $username;
+        $this->id        = $id;
+        $this->username  = $username;
         $this->firstName = $firstName;
-        $this->lastName = $lastName;
-        $this->email    = $email;
+        $this->lastName  = $lastName;
+        $this->email     = $email;
     }
 
     public function setId(int $id) {
