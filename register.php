@@ -13,8 +13,14 @@ $username = $fname = $lname = $email = "";
 $userPattern = "/^\w{5,50}$/";
 
 // Clean Inputs
-function cleanInput($data) {
+function cleanInput($data, $type="") {
+    // Clean Input Data
     $data = trim(stripslashes(htmlspecialchars($data)));
+
+    // Format Names
+    if ($type == "name") {
+        $data = ucwords($data);
+    }
     return $data;
 }
 
