@@ -52,7 +52,7 @@ $data = $record->readAll();
                     echo "<td>" . $val['username'] . "</td>";
                     echo "<td>" . $val['first_name'] . " " . $val['last_name'] . "</td>";
                     echo "<td>" . $val['email'] . "</td>";
-                    echo '<td class="opt-field"><button class="btn btn-info">Update</button> <button class="btn btn-danger">Delete</button></td>';
+                    echo '<td class="opt-field"><a class="btn btn-info" href="update.php?id=' . $val['id'] . '&request=update">Update</a> <a class="btn btn-danger" href="delete.php?id=' . $val['id'] . '&request=delete">Delete</a></td>';
                     echo "</tr>";
                 }
                 ?>
