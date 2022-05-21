@@ -19,26 +19,25 @@ include_once "register.php";
 
 
     <div class="container main-container">
-
         <div class="heading" style="margin-bottom: 2rem;">
             <h2>Crud Application</h2>
         </div>
 
         <div class="form-control">
             <h4>Add new record</h4>
-            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF'])?>" method="post">
+            <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <label for="username" class="form-label">Username <span class="required">*</span></label>
                 <input type="text" name="username" id="username" class="text-inp">
-                <span class="error"><?php echo $usernameErr; ?></span> 
+                <span class="error"><?php echo $usernameErr; ?></span>
                 <label for="fname" class="form-label">First Name <span class="required">*</span></label>
                 <input type="text" name="fname" id="fname" class="text-inp">
-                <span class="error"><?php echo $fnameErr; ?> </span> 
+                <span class="error"><?php echo $fnameErr; ?> </span>
                 <label for="lname" class="form-label">Last Name <span class="required">*</span></label>
                 <input type="text" name="lname" id="lname" class="text-inp">
-                <span class="error"><?php echo $lnameErr; ?></span> 
+                <span class="error"><?php echo $lnameErr; ?></span>
                 <label for="email" class="form-label">Email Address <span class="required">*</span></label>
                 <input type="text" name="email" id="email" class="text-inp">
-                <span class="error"><?php echo $emailErr; ?> </span> 
+                <span class="error"><?php echo $emailErr; ?> </span>
                 <div class="submit-form">
                     <input type="submit" value="Register" class="btn btn-success submit-btn" name="register">
                 </div>
