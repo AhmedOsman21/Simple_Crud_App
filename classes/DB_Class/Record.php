@@ -13,6 +13,7 @@ class Record extends DB_Connection {
     private $firstName;
     private $lastName;
     private $email;
+    public $result;
 
 
     // Setters
@@ -73,6 +74,7 @@ class Record extends DB_Connection {
             $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
+            $this->result = "User Has Been Registered Successfully.";
         } catch(PDOException $e) {
             return $e->getMessage();
         }
@@ -123,6 +125,7 @@ class Record extends DB_Connection {
             $sql = "DELETE FROM users WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->id]);
+            $this->result = "User Has Been Deleted Successfully.";
         } catch (PDOException $e) {
             return $e->getMessage();
         }
