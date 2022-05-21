@@ -12,6 +12,9 @@ $username = $fname = $lname = $email = "";
 // Confirmation Message Variable
 $confirm_msg = "";
 
+// Redirect will be set to 1 after showing the confirmation message
+$redirect = 0;
+
 // Username Regex Pattern
 $userPattern = "/^\w{5,50}$/";
 
@@ -111,6 +114,7 @@ if (isset($_POST['register'])) {
         $record->insertRecord();
         if ($record->result) {
             $confirm_msg = $record->result;
+            $redirect = 1;
         }
     }
 }

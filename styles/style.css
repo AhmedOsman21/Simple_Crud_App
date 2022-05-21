@@ -120,6 +120,11 @@ form {
     margin-bottom: 1.5rem;
 }  
 
+.success-proc {
+    color: #5cb85c;
+    font-size: small;
+}
+
 .text-inp:focus {
     border-bottom: 1px solid #329193;
 }
