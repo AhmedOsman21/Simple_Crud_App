@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 $username = cleanInput($_POST['username']);
             }
             // Reset username property after checking whether it's valid or not
-            $record->setUser(null);
+            $record->setUser("");
         }
     }
 
