@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 }
 
 // User Clicked Register Button
-if ($_POST['register']) {
+if (isset($_POST['register'])) {
     // No Errors
     if (!$usernameErr && !$fnameErr && !$lnameErr && !$emailErr) {
         // Setting Data To Be Inserted In Database
