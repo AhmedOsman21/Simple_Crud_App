@@ -91,7 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $emailErr = "Please, type a valid email!";
         } else {
             // Valide Email
-            $email = cleanInput($email);
+            $email = cleanInput($_POST['email']);
         }
     }
 }
@@ -107,4 +107,3 @@ if ($_POST['register']) {
         $record->setEmail($email);
     }
 }
-
