@@ -125,7 +125,7 @@ class Record extends DB_Connection {
             $sql = "DELETE FROM users WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->id]);
-            $this->result = "User Has Been Deleted Successfully. <a href='../crud_app/' class='records-link'>Records</a>";
+            echo '<script>alert("User Has Been Deleted Successfully."); window.location = "../crud_app/"</script>';
         } catch (PDOException $e) {
             return $e->getMessage();
         }
