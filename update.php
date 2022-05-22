@@ -1,3 +1,13 @@
+<?php
+require_once "autoload.php";
+use DB_Class\Record;
+
+$record = new Record;
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
