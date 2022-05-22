@@ -3,7 +3,7 @@ CREATE DATABASE records;
 
 CREATE TABLE users(
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    username VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(255) NOT NULL,
     firstName VARCHAR(25),
     lastName VARCHAR(25)
