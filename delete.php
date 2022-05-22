@@ -6,3 +6,9 @@ use DB_Class\Record;
 
 // Record instance
 $record = new Record;
+
+if (isset($_GET['id'])) {
+    if ($_GET['request'] == "delete") {
+        $record->setId($_GET['id']);
+    }
+}
