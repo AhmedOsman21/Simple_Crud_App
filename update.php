@@ -20,7 +20,7 @@
         </div>
 
         <div class="form-control">
-            <h4>Add new record</h4>
+            <h4>Update record</h4>
             <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <label for="username" class="form-label">Username <span class="required">*</span></label>
                 <input type="text" name="username" id="username" class="text-inp">
