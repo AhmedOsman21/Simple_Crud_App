@@ -7,6 +7,8 @@ $record = new Record;
 $id = null;
 if (isset($_GET['id']) && isset($_GET['request'])) {
     $id = $_GET['id'];
+
+    $record->setId($id);
 }
 
 
