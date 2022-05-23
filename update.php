@@ -7,7 +7,7 @@ $record = new Record;
 $id = null;
 if (isset($_GET['id']) && isset($_GET['request'])) {
     $id = $_GET['id'];
-
+    // Set the id to the given one
     $record->setId($id);
 }
 
@@ -17,6 +17,8 @@ if (isset($_POST['update'])) {
     $record->setFirstName($_POST['fname']);
     $record->setLastName($_POST['lname']);
     $record->setEmail($_POST['email']);
+    // Update user
+    $record->update();
 }
 
 
