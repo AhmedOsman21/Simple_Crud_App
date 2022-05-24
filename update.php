@@ -5,6 +5,9 @@ use DB_Class\Record;
 
 $record = new Record;
 
+// To let input validation know that this is updating operation.
+$proc = "update";
+
 // Validate inputs
 require_once "input_validation.php";
 
