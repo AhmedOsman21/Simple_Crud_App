@@ -10,8 +10,6 @@ $usernameErr = $fnameErr = $lnameErr = $emailErr = "";
 $username = $fname = $lname = $email = "";
 
 
-// Redirect will be set to 1 after showing the confirmation message
-$redirect = 0;
 
 // Username Regex Pattern
 $userPattern = "/^\w{5,50}$/";
