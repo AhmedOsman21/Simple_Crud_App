@@ -22,6 +22,8 @@ if (isset($_POST['update'])) {
 }
 
 
+// Getting the record
+$user = $record->read()[0];
 
 ?>
 
