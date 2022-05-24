@@ -5,6 +5,9 @@ use DB_Class\Record;
 // Instanciate Record Object
 $record = new Record();
 
+// To let input validation know that this is registering operation.
+$proc = null;
+
 // Validate inputs
 require_once "input_validation.php";
 
