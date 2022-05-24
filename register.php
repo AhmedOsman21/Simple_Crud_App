@@ -108,9 +108,5 @@ if (isset($_POST['register'])) {
         $record->setLastName($lname);
         $record->setEmail($email);
         $record->insertRecord();
-        if ($record->result) {
-            $confirm_msg = $record->result;
-            $redirect = 1;
-        }
     }
 }
