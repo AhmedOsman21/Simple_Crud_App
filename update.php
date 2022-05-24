@@ -4,7 +4,9 @@ use DB_Class\Record;
 
 $record = new Record;
 
-$id = null;
+// Validate inputs
+require_once "input_validation.php";
+
 if (isset($_GET['id']) && isset($_GET['request'])) {
     $id = $_GET['id'];
     // Set the id to the given one
