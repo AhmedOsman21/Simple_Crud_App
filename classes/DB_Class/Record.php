@@ -73,7 +73,7 @@ class Record extends DB_Connection {
             $sql = "INSERT INTO users(username, first_name, last_name, email) VALUES(?, ?, ?, ?)";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
-            echo '<script>alert("User Has Been Added Successfully."); window.location = "../crud_app/"</script>';
+            echo '<script>alert("User Has Been Saved Successfully."); window.location = "../crud_app/"</script>';
         } catch (PDOException $e) {
             return $e->getMessage();
         }
@@ -112,6 +112,7 @@ class Record extends DB_Connection {
             $sql = "UPDATE users SET username=?, first_name=?, last_name=?, email=? WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email, $this->id]);
+            echo '<script>alert("User Updated Successfully."); window.location = "../crud_app/"</script>';
         } catch (PDOException $e) {
             return $e->getMessage();
         }
@@ -124,7 +125,7 @@ class Record extends DB_Connection {
             $sql = "DELETE FROM users WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->id]);
-            echo '<script>alert("User Has Been Deleted Successfully."); window.location = "../crud_app/"</script>';
+            echo '<script>alert("User Deleted Successfully."); window.location = "../crud_app/"</script>';
         } catch (PDOException $e) {
             return $e->getMessage();
         }
