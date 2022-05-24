@@ -135,20 +135,24 @@ class Record extends DB_Connection {
     // Check Username
     public function userExists(?string $proc=null) {
         try {
-            // Check if username exists before inserting
-            $sql = "SELECT username FROM users WHERE username = ?";
-
-            /* 
-            IF STAMTENT:
-            Don't count the current username as a redundant
-            Unless user is trying to change his username 
-            to a username that's associated with another id.
-            */
+            $sql = null;
+            $stmt = null;
+            
             if ($proc == "update") {
-                $sql .= " AND id <> ?";
+                /* 
+                Don't count the current username as a redundant
+                Unless user is trying to change his username 
+                to a username that's associated with another id.
+                */
+                $sql = "SELECT username FROM users WHERE username = ? AND id <> ?";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([$this->username, $this->id]);
+            } else {
+                // Check if username exists before inserting
+                $sql = "SELECT username FROM users WHERE username = ?";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([$this->username]);
             }
-            $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$this->username, $this->id]);
 
             if ($stmt->rowCount()) {
                 return true;
