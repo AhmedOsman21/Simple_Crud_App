@@ -1,5 +1,6 @@
 <?php
 require_once "autoload.php";
+
 use DB_Class\Record;
 
 $record = new Record;
@@ -15,12 +16,15 @@ if (isset($_GET['id']) && isset($_GET['request'])) {
 
 // Submit button is clicked
 if (isset($_POST['update'])) {
-    $record->setUser($_POST['username']);
-    $record->setFirstName($_POST['fname']);
-    $record->setLastName($_POST['lname']);
-    $record->setEmail($_POST['email']);
-    // Update user
-    $record->update();
+    // No Errors
+    if (!$usernameErr && !$fnameErr && !$lnameErr && !$emailErr) {
+        $record->setUser($_POST['username']);
+        $record->setFirstName($_POST['fname']);
+        $record->setLastName($_POST['lname']);
+        $record->setEmail($_POST['email']);
+        // Update user
+        $record->update();
+    }
 }
 
 
@@ -54,16 +58,16 @@ $user = $record->read()[0];
             <h4>Update record</h4>
             <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <label for="username" class="form-label">Username <span class="required">*</span></label>
-                <input type="text" name="username" id="username" class="text-inp" value="<?php echo $user['username']?>">
+                <input type="text" name="username" id="username" class="text-inp" value="<?php echo $user['username'] ?>">
                 <span class="error"><?php echo $usernameErr; ?></span>
                 <label for="fname" class="form-label">First Name <span class="required">*</span></label>
-                <input type="text" name="fname" id="fname" class="text-inp" value="<?php echo $user['first_name']?>">
+                <input type="text" name="fname" id="fname" class="text-inp" value="<?php echo $user['first_name'] ?>">
                 <span class="error"><?php echo $fnameErr; ?> </span>
                 <label for="lname" class="form-label">Last Name <span class="required">*</span></label>
-                <input type="text" name="lname" id="lname" class="text-inp" value="<?php echo $user['last_name']?>">
+                <input type="text" name="lname" id="lname" class="text-inp" value="<?php echo $user['last_name'] ?>">
                 <span class="error"><?php echo $lnameErr; ?></span>
                 <label for="email" class="form-label">Email Address <span class="required">*</span></label>
-                <input type="text" name="email" id="email" class="text-inp" value="<?php echo $user['email']?>">
+                <input type="text" name="email" id="email" class="text-inp" value="<?php echo $user['email'] ?>">
                 <span class="error"><?php echo $emailErr; ?> </span>
                 <div class="submit-form">
                     <input type="submit" value="Update" class="btn btn-success submit-btn" name="update">
