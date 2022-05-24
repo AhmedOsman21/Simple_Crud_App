@@ -18,10 +18,10 @@ if (isset($_GET['id']) && isset($_GET['request'])) {
 if (isset($_POST['update'])) {
     // No Errors
     if (!$usernameErr && !$fnameErr && !$lnameErr && !$emailErr) {
-        $record->setUser($_POST['username']);
-        $record->setFirstName($_POST['fname']);
-        $record->setLastName($_POST['lname']);
-        $record->setEmail($_POST['email']);
+        $record->setUser($username);
+        $record->setFirstName($fname);
+        $record->setLastName($lname);
+        $record->setEmail($email);
         // Update user
         $record->update();
     }
