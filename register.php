@@ -9,8 +9,6 @@ $usernameErr = $fnameErr = $lnameErr = $emailErr = "";
 // Form Variables
 $username = $fname = $lname = $email = "";
 
-// Confirmation Message Variable
-$confirm_msg = "";
 
 // Redirect will be set to 1 after showing the confirmation message
 $redirect = 0;
