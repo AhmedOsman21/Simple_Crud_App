@@ -8,14 +8,14 @@ $record = new Record;
 // To let input validation know that this is updating operation.
 $proc = "update";
 
-// Validate inputs
-require_once "input_validation.php";
-
 if (isset($_GET['id']) && isset($_GET['request'])) {
     $id = $_GET['id'];
     // Set the id to the given one
     $record->setId($id);
 }
+// Validate inputs
+require_once "input_validation.php";
+
 
 // Submit button is clicked
 if (isset($_POST['update'])) {
