@@ -74,7 +74,7 @@ class Record extends DB_Connection {
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->username, $this->firstName, $this->lastName, $this->email]);
             echo '<script>alert("User Has Been Added Successfully."); window.location = "../crud_app/"</script>';
-        } catch(PDOException $e) {
+        } catch (PDOException $e) {
             return $e->getMessage();
         }
     }
@@ -134,10 +134,12 @@ class Record extends DB_Connection {
     // Check Username
     public function userExists() {
         try {
-            $sql = "SELECT username FROM users WHERE username = ?";
+            // Check if username exists before inserting or would be duplicated on update
+            $sql = "SELECT username FROM users WHERE username = ? & id <> ?";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$this->username]);
-            if ($stmt->rowCount() > 0) {
+            $stmt->execute([$this->username, $this->id]);
+
+            if ($stmt->rowCount()) {
                 return true;
             } else {
                 return false;
@@ -147,4 +149,3 @@ class Record extends DB_Connection {
         }
     }
 }
-
