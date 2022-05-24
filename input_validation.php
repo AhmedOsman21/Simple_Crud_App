@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             // Set user to check it.
             $record->setUser($_POST['username']);
             // Check if username already exists in database
-            if ($record->userExists()) {
+            if ($record->userExists($proc)) {
                 $usernameErr = "Username Already Exists!";
             } else {
                 // Valid Username
