@@ -39,6 +39,7 @@ include_once "register.php";
                 <input type="text" name="email" id="email" class="text-inp">
                 <span class="error"><?php echo $emailErr; ?> </span>
                 <div class="submit-form">
+                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
                     <input type="submit" value="Register" class="btn btn-success submit-btn" name="register">
                 </div>
             </form>

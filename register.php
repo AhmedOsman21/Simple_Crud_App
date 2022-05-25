@@ -23,3 +23,9 @@ if (isset($_POST['register'])) {
         $record->insertRecord();
     }
 }
+
+// Cancel submitting
+if (isset($_POST['cancel'])) {
+    header("Location:../crud_app");
+    exit();
+}
