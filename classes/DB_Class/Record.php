@@ -163,4 +163,36 @@ class Record extends DB_Connection {
             return $e->getMessage();
         }
     }
+
+    // Check E-mail Address
+    public function emailExists(?string $proc=null) {
+        try {
+            $sql = null;
+            $stmt = null;
+            
+            if ($proc == "update") {
+                /* 
+                Don't count the current username as a redundant
+                Unless user is trying to change his username 
+                to a username that's associated with another id.
+                */
+                $sql = "SELECT email FROM users WHERE email = ? AND id <> ?";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([$this->email, $this->id]);
+            } else {
+                // Check if username exists before inserting
+                $sql = "SELECT email FROM users WHERE email = ?";
+                $stmt = $this->conn->prepare($sql);
+                $stmt->execute([$this->email]);
+            }
+
+            if ($stmt->rowCount()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (PDOException $e) {
+            return $e->getMessage();
+        }
+    }
 }
