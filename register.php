@@ -5,6 +5,9 @@ use DB_Class\Record;
 // Instanciate Record Object
 $record = new Record();
 
+// Reset ID Before Insertion
+$record->resetId();
+
 // To let input validation know that this is registering operation.
 $proc = null;
 
