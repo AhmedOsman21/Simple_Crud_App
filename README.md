@@ -149,6 +149,7 @@ Methods:
 - `delete()` Delete user from users table that has a certain id.
 - `userExists($proc)` Check if username already exists in database and behave differently according to `$proc` whether it's update or register.
 - `emailExists($proc)` Check if email already exists in database and behave differently according to `$proc` whether it's update or register.
+- `resetID()` Resets the auto increment to the start from the last-record's id.
 
 
 ### Functions:
