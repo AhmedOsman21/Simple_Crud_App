@@ -83,8 +83,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
             $emailErr = "Please, type a valid email!";
         } else {
-            // Valid Email
-            $email = cleanInput($_POST['email']);
+            $record->setEmail($_POST['email']);
+            if ($record->emailExists($proc)) {
+                $emailErr = "This e-mail is linked with another username";
+            } else {
+                // Valid Email
+                $email = cleanInput($_POST['email']);
+            }
+            $record->setEmail("");
         }
     }
 }
