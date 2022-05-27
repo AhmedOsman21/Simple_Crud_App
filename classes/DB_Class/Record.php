@@ -200,9 +200,17 @@ class Record extends DB_Connection {
     // Reset id after deletion
     public function resetId() {
         try {
-            $sql = "ALTER TABLE users AUTO_INCREMENT = ?";
+            // Fetch All Users
+            $users = $this->readAll();
+            if ($users) {
+                // Fetch the id of the last user
+                $lastId = $users[sizeof($users) - 1]['id'];
+            } else {
+                $lastId = 0;
+            }
+            $sql = "ALTER TABLE users AUTO_INCREMENT = $lastId;";
             $stmt = $this->conn->prepare($sql);
-            $stmt->execute([$this->id]);
+            $stmt->execute([]);
         } catch(PDOException $e) {
             return $e->getMessage();
         }
