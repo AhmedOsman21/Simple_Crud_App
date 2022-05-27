@@ -33,7 +33,7 @@ if (isset($_POST['update'])) {
 // Cancel submitting
 if (isset($_POST['cancel'])) {
     header("Location:../crud_app");
-    exit();
+    die();
 }
 
 // Getting the record
