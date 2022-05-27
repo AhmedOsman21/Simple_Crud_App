@@ -39,10 +39,10 @@ include_once "register.php";
                 <input type="text" name="email" id="email" class="text-inp">
                 <span class="error"><?php echo $emailErr; ?> </span>
                 <div class="submit-form">
-                    <!-- Cancel Button -->
-                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
                     <!-- Submit Button -->
                     <input type="submit" value="Register" class="btn btn-success submit-btn" name="register">
+                    <!-- Cancel Button -->
+                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
                 </div>
             </form>
         </div>

@@ -78,10 +78,10 @@ $user = $record->read()[0];
                 <input type="text" name="email" id="email" class="text-inp" value="<?php echo $user['email'] ?>">
                 <span class="error"><?php echo $emailErr; ?> </span>
                 <div class="submit-form">
-                    <!-- Cancel button -->
-                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
                     <!-- Submit button -->
                     <input type="submit" value="Update" class="btn btn-success submit-btn" name="update">
+                    <!-- Cancel button -->
+                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
                 </div>
             </form>
         </div>
