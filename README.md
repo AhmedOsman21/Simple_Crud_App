@@ -3,7 +3,8 @@
 ### Project Structure
 - Classes
     - DB_classes
-        - *Db_Connection*
+        - Db_Connection
+        - Record.php
         
 
 - icons
@@ -28,6 +29,14 @@
 
 *db.sql*
 
+*delete.php*
+
 *index.php*
 
+*input_validation.php*
+
 *README.md*
+
+*register.php*
+
+*update.php*
