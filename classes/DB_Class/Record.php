@@ -122,6 +122,7 @@ class Record extends DB_Connection {
     // Delete User
     public function delete() {
         try {
+            // Deleting
             $sql = "DELETE FROM users WHERE id=?";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([$this->id]);
@@ -195,4 +196,16 @@ class Record extends DB_Connection {
             return $e->getMessage();
         }
     }
+
+    // Reset id after deletion
+    public function resetId($lastId) {
+        try {
+            $sql = "ALTER TABLE users AUTO_INCREMENT = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$lastId]);
+        } catch(PDOException $e) {
+            return $e->getMessage();
+        }
+    }
+
 }
