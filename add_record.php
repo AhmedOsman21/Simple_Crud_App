@@ -42,7 +42,7 @@ include_once "register.php";
                     <!-- Submit Button -->
                     <input type="submit" value="Register" class="btn btn-success submit-btn" name="register">
                     <!-- Cancel Button -->
-                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
+                    <input type="button" value="Cancel" class="btn btn-danger submit-btn" name="cancel" onclick="cancel_submition();">
                 </div>
             </form>
         </div>
@@ -54,6 +54,7 @@ include_once "register.php";
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cancel_submition.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 

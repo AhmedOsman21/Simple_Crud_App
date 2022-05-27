@@ -30,12 +30,6 @@ if (isset($_POST['update'])) {
     }
 }
 
-// Cancel submitting
-if (isset($_POST['cancel'])) {
-    header("Location:../crud_app");
-    die();
-}
-
 // Getting the record
 $user = $record->read()[0];
 ?>
@@ -81,7 +75,7 @@ $user = $record->read()[0];
                     <!-- Submit button -->
                     <input type="submit" value="Update" class="btn btn-success submit-btn" name="update">
                     <!-- Cancel button -->
-                    <input type="submit" value="Cancel" class="btn btn-danger submit-btn" name="cancel">
+                    <input type="button" value="Cancel" class="btn btn-danger submit-btn" name="cancel" onclick="cancel_submition();">
                 </div>
             </form>
         </div>
@@ -92,6 +86,7 @@ $user = $record->read()[0];
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/cancel_submition.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </body>
 
