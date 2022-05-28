@@ -27,16 +27,16 @@ include_once "register.php";
             <h4>Add new record</h4>
             <form action="<?php htmlspecialchars($_SERVER['PHP_SELF']) ?>" method="post">
                 <label for="username" class="form-label">Username <span class="required">*</span></label>
-                <input type="text" name="username" id="username" class="text-inp">
+                <input type="text" name="username" id="username" class="text-inp" value="<?= $username ?>">
                 <span class="error"><?php echo $usernameErr; ?></span>
                 <label for="fname" class="form-label">First Name <span class="required">*</span></label>
-                <input type="text" name="fname" id="fname" class="text-inp">
+                <input type="text" name="fname" id="fname" class="text-inp" value="<?= $fname ?>">
                 <span class="error"><?php echo $fnameErr; ?> </span>
                 <label for="lname" class="form-label">Last Name <span class="required">*</span></label>
-                <input type="text" name="lname" id="lname" class="text-inp">
+                <input type="text" name="lname" id="lname" class="text-inp" value="<?= $lname ?>">
                 <span class="error"><?php echo $lnameErr; ?></span>
                 <label for="email" class="form-label">Email Address <span class="required">*</span></label>
-                <input type="text" name="email" id="email" class="text-inp">
+                <input type="text" name="email" id="email" class="text-inp" value="<?= $email ?>">
                 <span class="error"><?php echo $emailErr; ?> </span>
                 <div class="submit-form">
                     <!-- Submit Button -->
