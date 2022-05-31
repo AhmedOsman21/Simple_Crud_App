@@ -8,14 +8,15 @@ $data = $record->readAll();
 
 function render_table($content) {
     foreach ($content as $key => $val) {
-        echo "<tr>";
         $name = $val['first_name'] . " " . $val['last_name'];
-        echo "<td>{$val['id']}</td>";
-        echo "<td>{$val['username']}</td>";
-        echo "<td>{$name}</td>";
-        echo "<td>{$val['email']}</td>";
-        echo "<td class='opt-field'><a class='btn btn-info' href='update.php?id={$val['id']}&request=update'>Update</a> <a class='btn btn-danger' href='delete.php?id={$val['id']}&request=delete'>Delete</a></td>";
-        echo "</tr>";
+        echo "
+        <tr>
+            <td>{$val['id']}</td>
+            <td>{$val['username']}</td>
+            <td>{$name}</td>
+            <td>{$val['email']}</td>
+            <td class='opt-field'><a class='btn btn-info' href='update.php?id={$val['id']}&request=update'>Update</a> <a class='btn btn-danger' href='delete.php?id={$val['id']}&request=delete'>Delete</a></td>
+        </tr>";
     }
 }
 ?>
