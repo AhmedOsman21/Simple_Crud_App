@@ -6,6 +6,18 @@ use DB_Class\Record;
 $record = new Record;
 $data = $record->readAll();
 
+function render_table($content) {
+    foreach ($content as $key => $val) {
+        echo "<tr>";
+        $name = $val['first_name'] . " " . $val['last_name'];
+        echo "<td>{$val['id']}</td>";
+        echo "<td>{$val['username']}</td>";
+        echo "<td>{$name}</td>";
+        echo "<td>{$val['email']}</td>";
+        echo "<td class='opt-field'><a class='btn btn-info' href='update.php?id={$val['id']}&request=update'>Update</a> <a class='btn btn-danger' href='delete.php?id={$val['id']}&request=delete'>Delete</a></td>";
+        echo "</tr>";
+    }
+}
 ?>
 
 
@@ -36,27 +48,20 @@ $data = $record->readAll();
         <div class="data-table record_content">
 
             <table class="table table-secondary table-striped">
-                <tr class="table-dark">
-                    <th style="width: 10%">ID</th>
-                    <th>Username</th>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th style="width: 20%">Options</th>
-                </tr>
+                <thead>
+                    <tr class="table-dark">
+                        <th style="width: 10%">ID</th>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th style="width: 20%">Options</th>
+                    </tr>
+                </thead>
 
-                <?php
-                foreach ($data as $key => $val) {
-                    $name = $val['first_name'] . " " . $val['last_name'];
-                    echo "<tr>";
-                    echo "<td>" . $val['id'] . "</td>";
-                    echo "<td>" . $val['username'] . "</td>";
-                    echo "<td>" . $name . "</td>";
-                    echo "<td>" . $val['email'] . "</td>";
-                    echo '<td class="opt-field"><a class="btn btn-info" href="update.php?id=' . $val['id'] . '&request=update">Update</a> <a class="btn btn-danger" href="delete.php?id=' . $val['id'] . '&request=delete">Delete</a></td>';
-                    echo "</tr>";
-                }
-                ?>
-
+                <tbody>
+                    <!-- Render table content -->
+                    <?= render_table($data) ?>
+                </tbody>
             </table>
 
         </div>
