@@ -6,16 +6,30 @@ use DB_Class\Record;
 $record = new Record;
 $data = $record->readAll();
 
-function render_table($content) {
-    foreach ($content as $key => $val) {
-        $name = $val['first_name'] . " " . $val['last_name'];
+// Number of table columns
+$cols_num = 5;
+
+// Rendering table content
+function render_table($content, $columns_number) {
+    if ($content) {
+        foreach ($content as $key => $val) {
+            $name = $val['first_name'] . " " . $val['last_name'];
+            echo "
+            <tr>
+                <td>{$val['id']}</td>
+                <td>{$val['username']}</td>
+                <td>{$name}</td>
+                <td>{$val['email']}</td>
+                <td class='opt-field'>
+                    <a class='btn btn-info' href='update.php?id={$val['id']}&request=update'>Update</a> 
+                    <a class='btn btn-danger' href='delete.php?id={$val['id']}&request=delete'>Delete</a>
+                </td>
+            </tr>";
+        }
+    } else {
         echo "
         <tr>
-            <td>{$val['id']}</td>
-            <td>{$val['username']}</td>
-            <td>{$name}</td>
-            <td>{$val['email']}</td>
-            <td class='opt-field'><a class='btn btn-info' href='update.php?id={$val['id']}&request=update'>Update</a> <a class='btn btn-danger' href='delete.php?id={$val['id']}&request=delete'>Delete</a></td>
+            <td colspan='$columns_number'>No Records</td>
         </tr>";
     }
 }
@@ -61,7 +75,7 @@ function render_table($content) {
 
                 <tbody>
                     <!-- Render table content -->
-                    <?= render_table($data) ?>
+                    <?= render_table(content: $data, columns_number: $cols_num) ?>
                 </tbody>
             </table>
 
