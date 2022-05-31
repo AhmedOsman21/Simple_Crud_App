@@ -147,14 +147,25 @@ Methods:
 - `readAll()` Fetch all users' records stored in database.
 - `update()` Update user data when specify the id to update it's data.
 - `delete()` Delete user from users table that has a certain id.
-- `userExists($proc)` Check if username already exists in database and behave differently according to `$proc` whether it's update or register.
-- `emailExists($proc)` Check if email already exists in database and behave differently according to `$proc` whether it's update or register.
+- `userExists($proc)` 
+Check if username already exists in database and behave differently according to `$proc` whether it's update or register.
+
+
+- `emailExists($proc)` 
+Check if email already exists in database and behave differently according to `$proc` whether it's update or register.
+
+
 - `resetID()` Resets the auto increment to the start from the last-record's id.
 
 
 ### Functions:
-- `cleanInput($data, $type="")` Cleans user inputs and trim leading & ending whitespaces from every data input, in addition it strip slashes and unwanted code that can be injected in input fields, and format name to be first letter uppercase if `$type` was set to `"name"`.
+- `cleanInput($data, $type="")` 
 
-- `render_table($content, $columns_number)` Renders the table content if there's content in the `$content` array, and display a row of a message _No Records_ with the width of `$columns_number` which should be the number of columns in the table.
+Cleans user inputs and trim leading & ending whitespaces from every data input, in addition it strip slashes and unwanted code that can be injected in input fields, and format name to be first letter uppercase if `$type` was set to `"name"`.
+
+
+- `render_table($content, $columns_number)` 
+
+Renders the table content if there's content in the `$content` array, and display a row of a message _No Records_ with the width of `$columns_number` which should be the number of columns in the table.
 
 
