@@ -155,4 +155,6 @@ Methods:
 ### Functions:
 - `cleanInput($data, $type="")` Cleans user inputs and trim leading & ending whitespaces from every data input, in addition it strip slashes and unwanted code that can be injected in input fields, and format name to be first letter uppercase if `$type` was set to `"name"`.
 
+- `render_table($content, $columns_number)` Renders the table content if there's content in the `$content` array, and display a row of a message _No Records_ with the width of `$columns_number` which should be the number of columns in the table.
+
 
