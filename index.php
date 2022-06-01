@@ -63,20 +63,17 @@ function render_table($content, $columns_number) {
         <div class="data-table record_content">
 
             <table class="table table-secondary table-striped">
-                <thead>
-                    <tr class="table-dark">
-                        <th style="width: 10%">ID</th>
-                        <th>Username</th>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th style="width: 20%">Options</th>
-                    </tr>
-                </thead>
+                <tr class="table-dark">
+                    <th style="width: 10%">ID</th>
+                    <th>Username</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th style="width: 20%">Options</th>
+                </tr>
 
-                <tbody>
-                    <!-- Render table content -->
-                    <?= render_table(content: $data, columns_number: $cols_num) ?>
-                </tbody>
+
+                <!-- Render table content -->
+                <?= render_table(content: $data, columns_number: $cols_num) ?>
             </table>
 
         </div>
